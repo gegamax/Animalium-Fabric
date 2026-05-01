@@ -1,0 +1,22 @@
+// Build configuration for Animalium Fabric mod
+plugins {
+    id 'fabric-loom' version '0.10.0'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    // Fabric API dependency
+    modCompile 'net.fabricmc:fabric-api:${project.fabric_version}'
+}
+
+minecraft {
+    version = project.minecraft_version
+    yarnMappings = project.yarn_mappings
+    loaders = ['fabric', 'forge']
+}
+
+// Add additional configurations as needed
